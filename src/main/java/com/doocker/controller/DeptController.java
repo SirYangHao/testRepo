@@ -26,7 +26,15 @@ public class DeptController {
 		Integer intt= deptService.insertDept(dept);
 		return list;
 	}
-	
+	@RequestMapping("list")
+	@ResponseBody
+	public List<Dept> getAllDept1(){
+		List<Dept> list = null;
+		Dept dept = new Dept();
+		dept.setDeptName("新增");
+		Integer intt= deptService.insertDept(dept);
+		return list;
+	}
 	
 	
 }
